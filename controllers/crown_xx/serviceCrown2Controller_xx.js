@@ -1,6 +1,21 @@
 const Category_xx = require('../../models/crown_xx/Category_xx');
 const Shop_xx = require('../../models/crown_xx/Shop_xx');
 
+//CREATE
+exports.create = async(body) =>{
+  //const [id,name,cat_id,price,remote_url,local_url] =req.body;
+
+  try{
+    return await Shop_xx.create(body);
+
+  }catch(err){
+    console.log('create',err);
+  }
+}
+
+
+//READ
+
 exports.getCategories = async (req, res) => {
   try {
     return await Category_xx.fetchAll();
@@ -29,4 +44,26 @@ exports.getProductsByCategory = async (category) => {
      console.log(err);
    }
 
+}
+
+//UPDATE
+
+exports.update = async(body) =>{
+  //const [id,name,cat_id,price,remote_url,local_url] =req.body;
+
+  try{
+    return await Shop_xx.updateById(body);
+
+  }catch(err){
+    console.log('update',err);
+  }
+}
+
+//DELETE
+exports.deleteById = async (id) => {
+  try {
+    return await Shop_xx.deleteById(id);
+  }catch(err){
+    console.log(err)
+  }
 }

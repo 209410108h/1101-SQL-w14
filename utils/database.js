@@ -14,7 +14,7 @@ if (isProduction) {
   pool = new Pool({
     user: 'postgres',
     host: 'localhost',
-    database: '1101_db_xx',
+    database: 'crown_xx',
     password: '0000',
     port: '5432',
   });
@@ -24,5 +24,6 @@ if (isProduction) {
 //   console.log(JSON.stringify(res.rows));
 //   pool.end();
 // });
+
 
 module.exports = pool;
