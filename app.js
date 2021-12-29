@@ -12,7 +12,7 @@ const crown2_xx_Router = require('./routes/crown2_xx');
 const api_xx_Router = require('./routes/api_xx');
 const midproj_xx_Router = require('./routes/midproj_xx');
 const midterm_xx_Router = require('./routes/midterm_xx');
-const booksRouter = require('./routes/books_xx');
+const booksRouter = require('./routes/books_08');
 /*這裡最常見的sop
 先const 一個變數 = require('./routes/XXXXXXX') */
 
@@ -48,7 +48,7 @@ app.use('/midproj_xx', midproj_xx_Router);
 /* midterm_xx */
 app.use('/midterm_xx', midterm_xx_Router);
 /* Books CRUD demo */
-app.use('/books', booksRouter);
+app.use('/books_08', booksRouter);
 
 /* finalproj_xx */
 
